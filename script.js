@@ -1,37 +1,41 @@
 let contador = 0;
 const contadorEl = document.getElementById('contador');
 const saco = document.getElementById('saco');
-const somSaco = document.getElementById('somSaco');
-const somComer = document.getElementById('somComer');
 const lago = document.querySelector('.lago');
 const patinho = document.getElementById('patinho');
 
 saco.addEventListener('click', () => {
-  somSaco.currentTime = 0;
-  somSaco.play();
+  // Som de clique
+  // document.getElementById('somSaco').play();
 
-  const mig = document.createElement('img');
-  mig.src = 'mig.png';
+  // Criar migalha SVG
+  const mig = document.createElement('div');
   mig.className = 'mig';
+  mig.innerHTML = `
+    <svg viewBox="0 0 20 20" width="20">
+      <circle cx="10" cy="10" r="5" fill="#e0c78c"/>
+    </svg>
+  `;
   mig.style.left = (window.innerWidth - 100) + 'px';
   lago.appendChild(mig);
 
+  // Posição aleatória no lago
   const destinoX = Math.random() * (window.innerWidth - 100);
   mig.style.left = destinoX + 'px';
 
-  // depois que migalha cai
   setTimeout(() => {
     const destinoY = 75;
     mig.style.top = destinoY + '%';
 
-    // leva patinho até a migalha
+    // Levar patinho até a migalha
     patinho.style.left = destinoX + 'px';
     patinho.style.bottom = destinoY + '%';
 
-    // quando o patinho chega (1s animacao)
+    // Quando o patinho chegar
     setTimeout(() => {
-      somComer.currentTime = 0;
-      somComer.play();
+      // Som de comer
+      // document.getElementById('somComer').play();
+
       mig.remove();
       contador++;
       contadorEl.textContent = contador;
@@ -39,4 +43,3 @@ saco.addEventListener('click', () => {
 
   }, 1500);
 });
-
