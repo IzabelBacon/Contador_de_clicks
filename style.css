@@ -13,10 +13,11 @@ body {
 
 .patinho {
   position: absolute;
+  width: 80px;
   bottom: 20%;
   left: 50%;
-  transform: translateX(-50%);
-  transition: left 1s ease, bottom 1s ease;
+  transform: translate(-50%, 0);
+  transition: transform 1s ease;
 }
 
 .saco {
@@ -58,3 +59,4 @@ body {
   0% { transform: translateY(0px); }
   100% { transform: translateY(10px); }
 }
+
