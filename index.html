@@ -2,36 +2,31 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8">
-  <title>Lago do Patinho</title>
+  <title>Lago do Patinho Fofo</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="lago">
     <div class="contador" id="contador">0</div>
 
-    <!-- Patinho imagem -->
-    <img src="patinho.png" class="patinho" id="patinho">
+    <!-- Patinho -->
+    <div class="patinho" id="patinho">
+      <div class="cabeca"></div>
+      <div class="corpo"></div>
+      <div class="bico"></div>
+      <div class="olho"></div>
+    </div>
 
-    <!-- Saco de Pão imagem -->
-    <img src="papel.png" class="saco" id="saco">
+    <!-- Saco de Pão -->
+    <div class="saco" id="saco">
+      <div class="papel"></div>
+    </div>
 
     <!-- Vitória-Régia -->
-    <div class="vitoria-regia" style="top: 60%; left: 20%;">
-      <svg viewBox="0 0 100 100" width="100">
-        <circle cx="50" cy="50" r="45" fill="#3cb371" />
-        <path d="M50,50 L95,50 A45,45 0 0,0 50,5 Z" fill="#8fe3ff"/>
-      </svg>
-    </div>
-
-    <div class="vitoria-regia" style="top: 70%; left: 70%;">
-      <svg viewBox="0 0 100 100" width="100">
-        <circle cx="50" cy="50" r="45" fill="#3cb371" />
-        <path d="M50,50 L95,50 A45,45 0 0,0 50,5 Z" fill="#8fe3ff"/>
-      </svg>
-    </div>
+    <div class="vitoria-regia" style="top: 60%; left: 20%;"></div>
+    <div class="vitoria-regia" style="top: 70%; left: 70%;"></div>
   </div>
 
   <script src="script.js"></script>
 </body>
 </html>
-

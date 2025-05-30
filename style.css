@@ -11,34 +11,6 @@ body {
   overflow: hidden;
 }
 
-.patinho {
-  position: absolute;
-  width: 80px;
-  bottom: 20%;
-  left: 50%;
-  transform: translate(-50%, 0);
-  transition: transform 1s ease;
-}
-
-.saco {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  width: 80px;
-  cursor: pointer;
-}
-
-.mig {
-  position: absolute;
-  width: 20px;
-  animation: cair 1.5s linear forwards;
-}
-
-@keyframes cair {
-  0% {top: 60px; opacity: 1;}
-  100% {top: 75%; opacity: 1;}
-}
-
 .contador {
   position: absolute;
   top: 20px;
@@ -49,9 +21,80 @@ body {
   text-shadow: 1px 1px 2px #000;
 }
 
+.patinho {
+  position: absolute;
+  bottom: 20%;
+  left: 50%;
+  width: 60px;
+  height: 60px;
+  transform: translate(-50%, 0);
+  transition: transform 1s ease;
+}
+
+.cabeca {
+  width: 20px;
+  height: 20px;
+  background: #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 20px;
+}
+
+.corpo {
+  width: 40px;
+  height: 30px;
+  background: #fff;
+  border-radius: 50% 50% 50% 50%;
+  position: absolute;
+  bottom: 0;
+  left: 10px;
+}
+
+.bico {
+  width: 10px;
+  height: 6px;
+  background: orange;
+  border-radius: 3px;
+  position: absolute;
+  top: 7px;
+  left: 40px;
+}
+
+.olho {
+  width: 4px;
+  height: 4px;
+  background: black;
+  border-radius: 50%;
+  position: absolute;
+  top: 7px;
+  left: 26px;
+}
+
+.saco {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+}
+
+.papel {
+  width: 60px;
+  height: 60px;
+  background: #d2a675;
+  border: 3px solid #9e7b50;
+  border-bottom: 10px solid #9e7b50;
+  clip-path: polygon(0 0, 100% 0, 100% 80%, 85% 90%, 70% 80%, 55% 90%, 40% 80%, 25% 90%, 0 80%);
+}
+
 .vitoria-regia {
   position: absolute;
   width: 100px;
+  height: 100px;
+  background: #3cb371;
+  border-radius: 50%;
   animation: flutuar 5s infinite ease-in-out alternate;
 }
 
@@ -59,4 +102,19 @@ body {
   0% { transform: translateY(0px); }
   100% { transform: translateY(10px); }
 }
+
+.mig {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background: #e0c78c;
+  border-radius: 50%;
+  animation: cair 1.5s linear forwards;
+}
+
+@keyframes cair {
+  0% {top: 60px; opacity: 1;}
+  100% {top: 75%; opacity: 1;}
+}
+
 
