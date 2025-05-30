@@ -1,1 +1,62 @@
+body {
+  margin: 0;
+  overflow: hidden;
+  background-color: #8fe3ff;
+}
+
+.lago {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.patinho {
+  position: absolute;
+  width: 80px;
+  bottom: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: left 1s ease, bottom 1s ease;
+}
+
+.saco {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 80px;
+  cursor: pointer;
+}
+
+.mig { 
+  position: absolute;
+  width: 20px;
+  animation: cair 1.5s linear forwards;
+}
+
+@keyframes cair {
+  0% {top: 60px; opacity: 1;}
+  100% {top: 75%; opacity: 1;}
+}
+
+.contador {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 30px;
+  color: #fff;
+  font-family: sans-serif;
+  text-shadow: 1px 1px 2px #000;
+}
+
+.vitoria-regia {
+  position: absolute;
+  width: 100px;
+  animation: flutuar 5s infinite ease-in-out alternate;
+}
+
+@keyframes flutuar {
+  0% { transform: translateY(0px); }
+  100% { transform: translateY(10px); }
+}
 
